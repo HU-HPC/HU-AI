@@ -35,4 +35,5 @@ tensorframes
 kafka
 tensorflowonspark 
 jieba
+nltk
 h2o
