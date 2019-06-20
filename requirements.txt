@@ -36,4 +36,5 @@ kafka
 tensorflowonspark 
 jieba
 nltk
+jupyterlab
 h2o
