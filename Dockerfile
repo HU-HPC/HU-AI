@@ -1,4 +1,4 @@
-FROM rocker/binder:3.5
+FROM rocker/binder:3.5.3
 
 # Copy your repository contents to the image
 COPY . ${HOME}
