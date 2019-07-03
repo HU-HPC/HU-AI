@@ -38,3 +38,4 @@ jieba
 nltk
 jupyterlab
 h2o
+graphviz
