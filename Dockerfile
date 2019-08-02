@@ -21,7 +21,6 @@ RUN apt-get update && \
     apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-    add-apt-repository -y ppa:opencpu/poppler
     apt-get update
     apt-get install -y libpoppler-cpp-dev
 
