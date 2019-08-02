@@ -17,12 +17,10 @@ ENV HOME /home/${NB_USER}
 WORKDIR ${HOME}
 
 RUN apt-get update && \
-    apt-get -y install python3-venv python3-dev && \
+    apt-get -y install python3-venv python3-dev libpoppler-cpp-dev && \
     apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-    apt-get update
-    apt-get install -y libpoppler-cpp-dev
 
 # Create a venv dir owned by unprivileged user & set up notebook in it
 # This allows non-root to install python libraries if required
