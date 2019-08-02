@@ -1,5 +1,5 @@
 FROM rocker/binder:3.5.3
-
+ENV ROOT=TRUE
 # Copy your repository contents to the image
 COPY . ${HOME}
 
