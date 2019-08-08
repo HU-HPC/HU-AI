@@ -17,7 +17,7 @@ ENV HOME /home/${NB_USER}
 WORKDIR ${HOME}
 
 RUN apt-get update && \
-    apt-get -y install python3-venv python3-dev libpoppler-cpp-dev && \
+    apt-get -y install python3-venv python3-dev libpoppler-cpp-dev sudo && \
     apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
@@ -26,6 +26,7 @@ RUN apt-get update && \
 # This allows non-root to install python libraries if required
 RUN mkdir -p ${VENV_DIR} && chown -R ${NB_USER} ${VENV_DIR}
 
+USER ${NB_USER}
 RUN python3 -m venv ${VENV_DIR} && \
     # Explicitly install a new enough version of pip
     pip3 install pip==19.2.1 && \
